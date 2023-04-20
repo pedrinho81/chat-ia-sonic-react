@@ -1,6 +1,7 @@
 import { MessageModel } from "@chatscope/chat-ui-kit-react"
 
-const API_KEY = import.meta.env.VITE_API_KEY
+const API_KEY = import.meta.env.VITE_API_KEY // Sua chave de api - https://docs.writesonic.com/reference/finding-your-api-key
+console.log(API_KEY)
 export type apiReqBodyDto = {
   enable_google_results?: boolean,
   enable_memory?: boolean,
@@ -11,8 +12,9 @@ export type apiReqBodyDto = {
 type apiResDto = {
   message: string
 }
-export const sendMessage = async (apiRequestBody: apiReqBodyDto):Promise<apiResDto>  => {
-  const res = await fetch('https://api.writesonic.com/v2/business/content/chatsonic?engine=premium&language=pt-br', {
+export const sendMessage = async (apiRequestBody: apiReqBodyDto):Promise<apiResDto | undefined>  => {
+  try {
+    const res = await fetch('https://api.writesonic.com/v2/business/content/chatsonic?engine=premium&language=pt-br', {
     method: 'POST',
     headers: {
       "Authorization": `Bearer ${API_KEY}`,
@@ -22,4 +24,8 @@ export const sendMessage = async (apiRequestBody: apiReqBodyDto):Promise<apiResD
     body: JSON.stringify(apiRequestBody)
   })
   return res.json()
+  } catch (error) {
+    alert('Error api call')
+    return new Error()
+  }
 }

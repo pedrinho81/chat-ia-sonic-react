@@ -26,13 +26,15 @@ function App() {
 
   const { mutate, isLoading, error } = useMutation('get-response', (apiRequestBody: apiReqBodyDto) => sendMessage(apiRequestBody), {
     onSuccess: (data) => {
-      setMessages(prev => [...prev, {
+      data?.message ? 
+       setMessages(prev => [...prev, {
         sender: 'ChatSonic',
         position: 'single',
         direction: 'incoming',
         is_sent: false,
         message: data.message
-      }]);
+      }]) 
+      : alert("Não obteve resposta do servidor");
     }
   })
 
