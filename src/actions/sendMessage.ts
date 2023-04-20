@@ -1,7 +1,7 @@
 import { MessageModel } from "@chatscope/chat-ui-kit-react"
 
 const API_KEY = import.meta.env.VITE_API_KEY // Sua chave de api - https://docs.writesonic.com/reference/finding-your-api-key
-console.log(API_KEY)
+
 export type apiReqBodyDto = {
   enable_google_results?: boolean,
   enable_memory?: boolean,

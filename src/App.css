@@ -60,3 +60,7 @@ footer {
 .cs-typing-indicator__text {
   color: #fff !important;
 }
+.text-purple-1 {
+  color: #0D1117  !important;
+  font-weight: bold;
+}
