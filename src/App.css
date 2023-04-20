@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  min-height: 100vh;
+  background-color: #31332f !important;
+}
+
+
+.Body {
+  position: relative; 
+  height: 90vh;
+  max-width: 80vw ;
+  margin: 1rem auto;
+  margin-bottom: 5vh
+  }
+footer {
+  text-align: center;
+  color: #fff;
+}
+.cs-main-container {
+  border-radius: 10px;
+  
+}
+.my-chat-container, .cs-message-list, .cs-message-input {
+  background-color: #0D1117!important;
+}
+.cs-message__content {
+  background-color: #4F555A !important;
+
+}
+.cs-message--incoming {
+  opacity: .8
+}
+.cs-message__html-content {
+  color: #fff
+}
+.cs-message-input__content-editor[data-placeholder]:empty::before {
+  color: #fff !important;
+}
+.cs-message-input__content-editor {
+  color: #fff !important;
+  background-color: #4F555A !important;
+}
+.cs-message-input__content-editor-wrapper {
+  background-color: #4F555A !important;
+}
+
+.cs-button--send {
+  color: #fff !important;
+}
+.cs-typing-indicator {
+  background-color: #4F555A !important;
+}
+.cs-typing-indicator__text {
+  color: #fff !important;
+}
