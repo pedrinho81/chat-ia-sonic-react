@@ -82,7 +82,8 @@ function App() {
             <MessageInput
             attachButton={false}
               placeholder="Escreva sua mensagem aqui."
-              onSend={handleSend} />
+              onSend={handleSend}
+               />
           </ChatContainer>
         </MainContainer>
       </div>
